@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf8l2u5b57vck"]
+
+[ext_resource type="Texture2D" uid="uid://dyuvjdibnu2eu" path="res://logo.png" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://bcry8prd4atm" path="res://5de25e62-0ae4-42f6-ad26-4d67e13f5345.png" id="1_62e2m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62e2m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_62e2m")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_right = 450.0
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.07963436, 0.10438686, 0.11787964, 0.8666667)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_0fbet")
+expand_mode = 5
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="VBoxContainer/ColorRect/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtu10")
+text = "NEW GAME"
+
+[node name="Button2" type="Button" parent="VBoxContainer/ColorRect/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtu10")
+text = "CONTINUE"
+
+[node name="Button3" type="Button" parent="VBoxContainer/ColorRect/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtu10")
+text = "EDITOR"
+
+[node name="Button4" type="Button" parent="VBoxContainer/ColorRect/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qtu10")
+text = "OPTIONS"
+
+[node name="Label" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
+text = "v1.0"
+horizontal_alignment = 1
+vertical_alignment = 1
