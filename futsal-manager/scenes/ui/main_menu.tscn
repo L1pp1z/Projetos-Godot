@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cf8l2u5b57vck"]
 
-[ext_resource type="Texture2D" uid="uid://dyuvjdibnu2eu" path="res://logo.png" id="1_0fbet"]
-[ext_resource type="Texture2D" uid="uid://bcry8prd4atm" path="res://5de25e62-0ae4-42f6-ad26-4d67e13f5345.png" id="1_62e2m"]
+[ext_resource type="Texture2D" uid="uid://bcry8prd4atm" path="res://assets/ui/main_menu.png" id="1_fe2o3"]
+[ext_resource type="Texture2D" uid="uid://dyuvjdibnu2eu" path="res://assets/extra/logo.png" id="2_1g8jr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62e2m"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -28,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_62e2m")
+texture = ExtResource("1_fe2o3")
 expand_mode = 3
 stretch_mode = 6
 
@@ -59,7 +59,7 @@ theme_override_constants/separation = 80
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/ColorRect/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_0fbet")
+texture = ExtResource("2_1g8jr")
 expand_mode = 5
 stretch_mode = 3
 
