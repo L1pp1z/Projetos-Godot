@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://hjpax4go8ggp"]
 
-[ext_resource type="Script" uid="uid://bry1c5v1oqbgo" path="res://scripts/ui/coach_creation.gd" id="1_uxajh"]
-[ext_resource type="Texture2D" uid="uid://ddyedi3e3sp54" path="res://assets/ui/bg_002.png" id="2_xadyp"]
+[ext_resource type="Script" uid="uid://bry1c5v1oqbgo" path="res://scripts/ui/coach_creator.gd" id="1_apisk"]
+[ext_resource type="Texture2D" uid="uid://ddyedi3e3sp54" path="res://assets/ui/bg_002.png" id="2_iy724"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_it867"]
 bg_color = Color(0.07058824, 0.10980392, 0.26666668, 1)
@@ -11,14 +11,19 @@ bg_color = Color(0.99607843, 0.8235294, 0.1254902, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xadyp"]
 
-[node name="CoachCreation" type="Control"]
+[node name="CoachCreator" type="Control" node_paths=PackedStringArray("first_name_input", "last_name_input", "age_input", "continue_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_uxajh")
+script = ExtResource("1_apisk")
+first_name_input = NodePath("VBoxContainer/ColorRect/VBoxContainer/HBoxContainer/firstName_input")
+last_name_input = NodePath("VBoxContainer/ColorRect/VBoxContainer/HBoxContainer/lastName_input")
+age_input = NodePath("VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2/age_input")
+continue_button = NodePath("BG/LineEnd/HBoxContainer/continue")
+main_menu = "uid://cf8l2u5b57vck"
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
@@ -27,7 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_xadyp")
+texture = ExtResource("2_iy724")
 expand_mode = 1
 stretch_mode = 6
 
@@ -136,18 +141,18 @@ columns = 2
 [node name="Label" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Name:"
+text = "*Name:"
 
 [node name="Label2" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Last Name:"
+text = "*Last Name:"
 
-[node name="Name_input" type="LineEdit" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+[node name="firstName_input" type="LineEdit" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 placeholder_text = "José"
 
-[node name="LastName_input" type="LineEdit" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+[node name="lastName_input" type="LineEdit" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 placeholder_text = "da Silva"
 
@@ -158,16 +163,18 @@ columns = 2
 [node name="Label" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Age:"
+text = "*Age:"
 
 [node name="Label2" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Gender:"
 
-[node name="age" type="SpinBox" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2"]
+[node name="age_input" type="SpinBox" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+min_value = 18.0
 max_value = 70.0
+value = 18.0
 
 [node name="gender" type="OptionButton" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2"]
 layout_mode = 2

@@ -1,10 +1,12 @@
 extends Node
 
-var coach := {
-	"first_name": "",
-	"last_name": "",
-	"age": 0,
-	"gender": "",
-	"continent": "",
-	"country": ""
-}
+signal coach_created
+var active_coach: CoachResource
+
+func create_coach(data: Dictionary):
+	var coach := CoachResource.new()
+	coach.first_name = data["first_name"]
+	coach.last_name = data["last_name"]
+	coach.age = data["age"]
+	active_coach = coach
+	emit_signal("coach_created")

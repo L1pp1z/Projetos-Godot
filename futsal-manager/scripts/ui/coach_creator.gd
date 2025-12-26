@@ -1,0 +1,55 @@
+extends Control
+
+#Data
+@export var first_name_input: LineEdit
+@export var last_name_input: LineEdit
+@export var age_input: SpinBox
+@export var continue_button: Button
+
+#Scenes
+@export_file("*.tscn") var main_menu: String
+@export_file("*.tscn") var select_club: String
+
+#Variables
+const MIN_NAME_LENGTH = 2
+
+func _ready():
+	continue_button.disabled = true
+	first_name_input.text_changed.connect(_on_input_changed)
+	last_name_input.text_changed.connect(_on_input_changed)
+	age_input.value_changed.connect(_on_age_changed)
+	
+	if GameState.has_signal("coach_created"):
+		GameState.coach_created.connect(_on_coach_created)
+
+func _on_input_changed(_new_text:String):
+	_validate_inputs()
+
+func _on_age_changed(_new_value:float):
+	_validate_inputs()
+	
+func _validate_inputs():
+	var first_name = first_name_input.text.strip_edges().length() >= MIN_NAME_LENGTH
+	var last_name = last_name_input.text.strip_edges().length() >= MIN_NAME_LENGTH
+	var age_valid = age_input.value
+	
+	if first_name and last_name and age_valid:
+		continue_button.disabled = false
+	else:
+		continue_button.disabled = true
+
+func _on_continue_pressed():
+	continue_button.disabled = true
+	
+	var coach_data = {
+		"first_name": first_name_input.text.strip_edges(),
+		"last_name": last_name_input.text.strip_edges(),
+		"age": int(age_input.value)
+	}
+	GameState.create_coach(coach_data)
+
+func _on_back_pressed():
+	get_tree().change_scene_to_file(main_menu)
+
+func _on_coach_created():
+	get_tree().change_scene_to_file(select_club)
