@@ -1,7 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf8l2u5b57vck"]
+[gd_scene load_steps=9 format=3 uid="uid://cf8l2u5b57vck"]
 
-[ext_resource type="Texture2D" uid="uid://bcry8prd4atm" path="res://assets/ui/main_menu.png" id="1_fe2o3"]
+[ext_resource type="Script" uid="uid://ol8ktbp3ncd5" path="res://scripts/ui/main_menu.gd" id="1_fe2o3"]
 [ext_resource type="Texture2D" uid="uid://dyuvjdibnu2eu" path="res://assets/extra/logo.png" id="2_1g8jr"]
+[ext_resource type="Texture2D" uid="uid://d10ljsccatsjk" path="res://assets/ui/bg_001.png" id="2_m1kxf"]
+[ext_resource type="Texture2D" uid="uid://dgfxfeegld5aj" path="res://assets/ui/x.png" id="3_m1kxf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe2o3"]
+bg_color = Color(0.02745098, 0.05490196, 0.15686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g8jr"]
+bg_color = Color(0.9882353, 0.64705884, 0.16862746, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62e2m"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -13,98 +21,152 @@ border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 
-[node name="Control" type="Control"]
+[node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fe2o3")
 
-[node name="ColorRect" type="TextureRect" parent="."]
+[node name="bg" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.208
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.79200006
+offset_top = 0.23999023
+offset_bottom = -0.24005127
+grow_vertical = 2
+texture = ExtResource("2_m1kxf")
+
+[node name="versao" type="Label" parent="bg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.934
+anchor_right = 1.0
+anchor_bottom = 0.08800001
+offset_left = 0.47998047
+offset_bottom = 0.0399971
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.14509805, 0.18039216, 0.3254902, 1)
+theme_override_font_sizes/font_size = 20
+text = "v1.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Button" parent="bg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.883
+anchor_top = 0.84800005
+anchor_right = 0.98
+anchor_bottom = 0.94500005
+offset_left = -0.23999023
+offset_top = -0.16003418
+offset_right = 0.5999756
+offset_bottom = 0.099975586
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.02745098, 0.05490196, 0.15686275, 1)
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 20
+theme_override_constants/align_to_largest_stylebox = 30
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fe2o3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1g8jr")
+text = "SAIR"
+autowrap_trim_flags = 0
+icon_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="bg/Exit"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.72
+anchor_top = 0.34100002
+anchor_right = 0.86300004
+anchor_bottom = 0.707
+offset_top = 0.0189991
+offset_right = 0.051849365
+offset_bottom = 0.012998581
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_fe2o3")
-expand_mode = 3
-stretch_mode = 6
+texture = ExtResource("3_m1kxf")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_left = 100.0
-offset_right = 450.0
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.208
+anchor_right = 0.35200003
+anchor_bottom = 0.79200006
+offset_left = 0.15999603
+offset_top = 0.23999023
+offset_right = -0.5600281
+offset_bottom = -0.24005127
 grow_vertical = 2
-theme_override_constants/separation = 20
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+[node name="bg_menu" type="ColorRect" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-color = Color(0.07963436, 0.10438686, 0.11787964, 0.8666667)
+color = Color(0.02745098, 0.05490196, 0.15686275, 0.9411765)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ColorRect"]
+[node name="Menu_box" type="VBoxContainer" parent="VBoxContainer/bg_menu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 100.0
-offset_bottom = -20.0
+offset_top = 9.0
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 80
+theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ColorRect/VBoxContainer"]
+[node name="Logo" type="TextureRect" parent="VBoxContainer/bg_menu/Menu_box"]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
+size_flags_vertical = 8
 texture = ExtResource("2_1g8jr")
-expand_mode = 5
-stretch_mode = 3
+expand_mode = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ColorRect/VBoxContainer"]
+[node name="button_box" type="VBoxContainer" parent="VBoxContainer/bg_menu/Menu_box"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="VBoxContainer/ColorRect/VBoxContainer/VBoxContainer"]
+[node name="new_game" type="Button" parent="VBoxContainer/bg_menu/Menu_box/button_box"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qtu10")
 text = "NEW GAME"
 
-[node name="Button2" type="Button" parent="VBoxContainer/ColorRect/VBoxContainer/VBoxContainer"]
+[node name="continue" type="Button" parent="VBoxContainer/bg_menu/Menu_box/button_box"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qtu10")
 text = "CONTINUE"
 
-[node name="Button3" type="Button" parent="VBoxContainer/ColorRect/VBoxContainer/VBoxContainer"]
+[node name="editor" type="Button" parent="VBoxContainer/bg_menu/Menu_box/button_box"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qtu10")
 text = "EDITOR"
 
-[node name="Button4" type="Button" parent="VBoxContainer/ColorRect/VBoxContainer/VBoxContainer"]
+[node name="options" type="Button" parent="VBoxContainer/bg_menu/Menu_box/button_box"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qtu10")
 text = "OPTIONS"
 
-[node name="Label" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer"]
-custom_minimum_size = Vector2(0, 60)
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_62e2m")
-text = "v1.0"
-horizontal_alignment = 1
-vertical_alignment = 1
+[connection signal="pressed" from="bg/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/bg_menu/Menu_box/button_box/new_game" to="." method="_on_new_game_pressed"]

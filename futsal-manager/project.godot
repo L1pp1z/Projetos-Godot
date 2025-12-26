@@ -13,12 +13,18 @@ config_version=5
 config/name="Futsal Manager"
 config/features=PackedStringArray("4.5", "Mobile")
 
+[autoload]
+
+GameState="*res://scripts/core/game_state.gd"
+
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/stretch/scale_mode="integer"
 
 [rendering]
 

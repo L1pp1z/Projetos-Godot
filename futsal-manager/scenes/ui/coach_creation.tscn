@@ -1,0 +1,228 @@
+[gd_scene load_steps=6 format=3 uid="uid://hjpax4go8ggp"]
+
+[ext_resource type="Script" uid="uid://bry1c5v1oqbgo" path="res://scripts/ui/coach_creation.gd" id="1_uxajh"]
+[ext_resource type="Texture2D" uid="uid://ddyedi3e3sp54" path="res://assets/ui/bg_002.png" id="2_xadyp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_it867"]
+bg_color = Color(0.07058824, 0.10980392, 0.26666668, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxajh"]
+bg_color = Color(0.99607843, 0.8235294, 0.1254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xadyp"]
+
+[node name="CoachCreation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uxajh")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xadyp")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02745098, 0.05490196, 0.15686275, 0.92156863)
+
+[node name="Title" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -132.5
+offset_top = 28.0
+offset_right = 132.5
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "CREATE MANAGER"
+
+[node name="LineEnd" type="ColorRect" parent="BG"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.02745098, 0.05490196, 0.15686275, 0.9607843)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG/LineEnd"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_right = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="back" type="Button" parent="BG/LineEnd/HBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_it867")
+text = "Back"
+
+[node name="continue" type="Button" parent="BG/LineEnd/HBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.02745098, 0.05490196, 0.15686275, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxajh")
+text = "Continue"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -260.0
+offset_right = 240.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 320)
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.029021477, 0.054103047, 0.15819162, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = -14.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "DETAILS"
+
+[node name="HBoxContainer" type="GridContainer" parent="VBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name:"
+
+[node name="Label2" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Last Name:"
+
+[node name="Name_input" type="LineEdit" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+placeholder_text = "José"
+
+[node name="LastName_input" type="LineEdit" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+placeholder_text = "da Silva"
+
+[node name="HBoxContainer2" type="GridContainer" parent="VBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Age:"
+
+[node name="Label2" type="Label" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Gender:"
+
+[node name="age" type="SpinBox" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+max_value = 70.0
+
+[node name="gender" type="OptionButton" parent="VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Male"
+popup/item_0/id = 0
+popup/item_1/text = "Female"
+popup/item_1/id = 1
+popup/item_2/text = "Unknown"
+popup/item_2/id = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04737793, 0.07937098, 0.20745835, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 14.0
+offset_top = 10.0
+offset_right = -14.0
+offset_bottom = 288.0
+grow_horizontal = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/ColorRect/ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "Select your Country:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ColorRect/ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ColorRect/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Continent:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/ColorRect/ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Tree" type="Tree" parent="VBoxContainer/ColorRect/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_xadyp")
+
+[connection signal="pressed" from="BG/LineEnd/HBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="BG/LineEnd/HBoxContainer/continue" to="." method="_on_continue_pressed"]
