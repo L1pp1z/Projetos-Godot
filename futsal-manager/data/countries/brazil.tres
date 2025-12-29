@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CountryResource" load_steps=3 format=3 uid="uid://bg8kqnivahyma"]
+
+[ext_resource type="Texture2D" uid="uid://cktoti2t6nru5" path="res://assets/data/flags/br.png" id="1_62q0g"]
+[ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="2_abwmw"]
+
+[resource]
+script = ExtResource("2_abwmw")
+key = "br"
+name = "Brazil"
+flag = ExtResource("1_62q0g")
+metadata/_custom_type_script = "uid://c7n87xflb38uq"

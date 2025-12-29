@@ -23,7 +23,6 @@ first_name_input = NodePath("VBoxContainer/ColorRect/VBoxContainer/HBoxContainer
 last_name_input = NodePath("VBoxContainer/ColorRect/VBoxContainer/HBoxContainer/lastName_input")
 age_input = NodePath("VBoxContainer/ColorRect/VBoxContainer/HBoxContainer2/age_input")
 continue_button = NodePath("BG/LineEnd/HBoxContainer/continue")
-main_menu = "uid://cf8l2u5b57vck"
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
@@ -86,7 +85,8 @@ layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 4
 theme_override_styles/normal = SubResource("StyleBoxFlat_it867")
-text = "Back"
+text = "BACK
+"
 
 [node name="continue" type="Button" parent="BG/LineEnd/HBoxContainer"]
 custom_minimum_size = Vector2(200, 40)
@@ -95,7 +95,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.02745098, 0.05490196, 0.15686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_uxajh")
-text = "Continue"
+text = "CONTINUE"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -218,7 +218,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="VBoxContainer/ColorRect/ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Continent:"
+text = "Confederation:"
 horizontal_alignment = 1
 vertical_alignment = 1
 

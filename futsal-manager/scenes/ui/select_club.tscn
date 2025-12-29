@@ -1,0 +1,325 @@
+[gd_scene load_steps=7 format=3 uid="uid://cogj635oyhcre"]
+
+[ext_resource type="Script" uid="uid://byq8bso7clgbr" path="res://scripts/ui/select_club.gd" id="1_0hqkh"]
+[ext_resource type="Texture2D" uid="uid://cg1chpatdu20e" path="res://assets/ui/bg_004.png" id="1_1yuy5"]
+[ext_resource type="Texture2D" uid="uid://cktoti2t6nru5" path="res://assets/data/flags/br.png" id="2_1xyh4"]
+[ext_resource type="Texture2D" uid="uid://dgfxfeegld5aj" path="res://assets/ui/x.png" id="3_0hqkh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oth17"]
+bg_color = Color(0.07058824, 0.10980392, 0.26666668, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xyh4"]
+bg_color = Color(0.99607843, 0.8235294, 0.1254902, 1)
+
+[node name="SelectClub" type="Control" node_paths=PackedStringArray("select_club_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0hqkh")
+coach_creator = "uid://hjpax4go8ggp"
+select_club_button = NodePath("BG/LineEnd/HBoxContainer/select_club")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1yuy5")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02745098, 0.05490196, 0.15686275, 0.92156863)
+
+[node name="Title" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39600003
+anchor_top = 0.039
+anchor_right = 0.60400003
+anchor_bottom = 0.097
+offset_left = 0.6199646
+offset_top = -0.07999992
+offset_right = -0.62005615
+offset_bottom = 0.15999603
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "SELECT CLUB"
+horizontal_alignment = 1
+
+[node name="LineEnd" type="ColorRect" parent="BG"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.02745098, 0.05490196, 0.15686275, 0.9607843)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BG/LineEnd"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_right = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="back" type="Button" parent="BG/LineEnd/HBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_oth17")
+text = "BACK"
+
+[node name="select_club" type="Button" parent="BG/LineEnd/HBoxContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.02745098, 0.05490196, 0.15686275, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xyh4")
+disabled = true
+text = "SELECT TEAM"
+
+[node name="ConfederationBG" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(300, 450)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.15300001
+anchor_right = 0.312
+anchor_bottom = 0.77800006
+offset_left = 0.15999603
+offset_top = -0.16001129
+offset_right = 0.63998413
+offset_bottom = -0.16003418
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02745098, 0.05490196, 0.15686275, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfederationBG"]
+custom_minimum_size = Vector2(280, 430)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.022000002
+anchor_right = 0.96700007
+anchor_bottom = 0.97800004
+offset_left = 0.10000038
+offset_top = 0.09999943
+offset_right = -0.1000061
+offset_bottom = -0.1000061
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ConfederationBG/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ConfederationBG/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Confederation:"
+
+[node name="OptionButton" type="OptionButton" parent="ConfederationBG/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Tree" type="Tree" parent="ConfederationBG/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeaguesBG" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(420, 150)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.33600003
+anchor_top = 0.15300001
+anchor_right = 0.66400003
+anchor_bottom = 0.36100003
+offset_left = -0.08001709
+offset_top = -0.16001129
+offset_right = 0.079956055
+offset_bottom = 0.07998657
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02745098, 0.05490196, 0.15686275, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeaguesBG"]
+custom_minimum_size = Vector2(340, 130)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095000006
+anchor_top = 0.067
+anchor_right = 0.90500003
+anchor_bottom = 0.933
+offset_left = 0.099998474
+offset_top = -0.05000019
+offset_right = -0.1000061
+offset_bottom = 0.05000305
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="competition_logo" type="TextureRect" parent="LeaguesBG/VBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("2_1xyh4")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LeaguesBG/VBoxContainer"]
+layout_mode = 2
+
+[node name="back" type="TextureButton" parent="LeaguesBG/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 2
+texture_normal = ExtResource("3_0hqkh")
+stretch_mode = 3
+
+[node name="competition_name" type="Label" parent="LeaguesBG/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Brasileirão Série A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="foward" type="TextureButton" parent="LeaguesBG/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("3_0hqkh")
+stretch_mode = 3
+
+[node name="ClubsBG" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(420, 270)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.33600003
+anchor_top = 0.40300003
+anchor_right = 0.66400003
+anchor_bottom = 0.77800006
+offset_left = -0.08001709
+offset_top = -0.16003418
+offset_right = 0.079956055
+offset_bottom = -0.16003418
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02745098, 0.05490196, 0.15686275, 1)
+
+[node name="Tree" type="Tree" parent="ClubsBG"]
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.024
+anchor_top = 0.037
+anchor_right = 0.9760001
+anchor_bottom = 0.96300006
+offset_left = -0.07999992
+offset_top = 0.010000229
+offset_right = 0.079956055
+offset_bottom = -0.010009766
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ClubDetailsBG" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(300, 450)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.68700004
+anchor_top = 0.15300001
+anchor_right = 0.92200005
+anchor_bottom = 0.77800006
+offset_left = 0.6399536
+offset_top = -0.16001129
+offset_right = -0.16003418
+offset_bottom = -0.16003418
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02745098, 0.05490196, 0.15686275, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ClubDetailsBG"]
+custom_minimum_size = Vector2(280, 430)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.022000002
+anchor_right = 0.96700007
+anchor_bottom = 0.97800004
+offset_left = 0.10000038
+offset_top = 0.09999943
+offset_right = -0.1000061
+offset_bottom = -0.1000061
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ClubDetailsBG/VBoxContainer"]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ClubDetailsBG/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_1xyh4")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ClubDetailsBG/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="ClubDetailsBG/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "TEAM NAME"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ClubDetailsBG/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "ARENA"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="ClubDetailsBG/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "CAPACITY"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="ClubDetailsBG/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "BUDGET"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ClubDetailsBG/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ClubDetailsBG/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "SQUAD:"
+horizontal_alignment = 1
+
+[node name="Tree" type="Tree" parent="ClubDetailsBG/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="BG/LineEnd/HBoxContainer/back" to="." method="_on_back_pressed"]

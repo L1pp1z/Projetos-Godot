@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://cf8l2u5b57vck"]
 
 [ext_resource type="Script" uid="uid://ol8ktbp3ncd5" path="res://scripts/ui/main_menu.gd" id="1_fe2o3"]
-[ext_resource type="Texture2D" uid="uid://dyuvjdibnu2eu" path="res://assets/extra/logo.png" id="2_1g8jr"]
 [ext_resource type="Texture2D" uid="uid://d10ljsccatsjk" path="res://assets/ui/bg_001.png" id="2_m1kxf"]
 [ext_resource type="Texture2D" uid="uid://dgfxfeegld5aj" path="res://assets/ui/x.png" id="3_m1kxf"]
+[ext_resource type="Texture2D" uid="uid://dyuvjdibnu2eu" path="res://assets/logo.png" id="4_m1kxf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe2o3"]
 bg_color = Color(0.02745098, 0.05490196, 0.15686275, 1)
@@ -29,7 +29,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fe2o3")
-coach_creator = "uid://hjpax4go8ggp"
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 1
@@ -130,7 +129,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 8
-texture = ExtResource("2_1g8jr")
+texture = ExtResource("4_m1kxf")
 expand_mode = 3
 
 [node name="button_box" type="VBoxContainer" parent="VBoxContainer/bg_menu/Menu_box"]

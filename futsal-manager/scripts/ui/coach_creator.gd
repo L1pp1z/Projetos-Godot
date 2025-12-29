@@ -6,12 +6,8 @@ extends Control
 @export var age_input: SpinBox
 @export var continue_button: Button
 
-#Scenes
-@export_file("*.tscn") var main_menu: String
-@export_file("*.tscn") var select_club: String
-
 #Variables
-const MIN_NAME_LENGTH = 2
+const MIN_NAME_LENGTH = 3
 
 func _ready():
 	continue_button.disabled = true
@@ -19,8 +15,7 @@ func _ready():
 	last_name_input.text_changed.connect(_on_input_changed)
 	age_input.value_changed.connect(_on_age_changed)
 	
-	if GameState.has_signal("coach_created"):
-		GameState.coach_created.connect(_on_coach_created)
+	GameState.coach_created.connect(_on_coach_created)
 
 func _on_input_changed(_new_text:String):
 	_validate_inputs()
@@ -49,7 +44,7 @@ func _on_continue_pressed():
 	GameState.create_coach(coach_data)
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file(main_menu)
+	SceneManager.go_to_main_menu()
 
-func _on_coach_created():
-	get_tree().change_scene_to_file(select_club)
+func _on_coach_created(coach: CoachResource):
+	SceneManager.go_to_select_club()

@@ -1,6 +1,6 @@
 extends Node
 
-signal coach_created
+signal coach_created(coach: CoachResource)
 var active_coach: CoachResource
 
 func create_coach(data: Dictionary):
@@ -9,4 +9,4 @@ func create_coach(data: Dictionary):
 	coach.last_name = data["last_name"]
 	coach.age = data["age"]
 	active_coach = coach
-	emit_signal("coach_created")
+	emit_signal("coach_created", coach)
