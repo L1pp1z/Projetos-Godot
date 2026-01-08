@@ -1,7 +1,5 @@
 extends Control
 
-signal club_selected
-
 @export_file("*.tscn") var coach_creator
 
 @export var select_club_button: Button

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CountryResource" load_steps=3 format=3 uid="uid://bdlopvrk4ejlt"]
+
+[ext_resource type="Texture2D" uid="uid://bif875vn2bj6v" path="res://assets/data/flags/uy.png" id="1_3x6d5"]
+[ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="1_atgm7"]
+
+[resource]
+script = ExtResource("1_atgm7")
+key = "uy"
+name = "Uruguay"
+flag = ExtResource("1_3x6d5")
+metadata/_custom_type_script = "uid://c7n87xflb38uq"

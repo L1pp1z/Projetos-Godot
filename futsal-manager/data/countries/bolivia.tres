@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CountryResource" load_steps=3 format=3 uid="uid://fxhd77nuj1p5"]
+
+[ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="1_l3jym"]
+[ext_resource type="Texture2D" uid="uid://mdydl8eapkxp" path="res://assets/data/flags/bo.png" id="1_ws8sf"]
+
+[resource]
+script = ExtResource("1_l3jym")
+key = "bo"
+name = "Bolivia"
+flag = ExtResource("1_ws8sf")
+metadata/_custom_type_script = "uid://c7n87xflb38uq"

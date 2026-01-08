@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RoleResource" load_steps=2 format=3 uid="uid://bytx664xhcn6v"]
+
+[ext_resource type="Script" uid="uid://djruy7ivkc0y7" path="res://scripts/models/role.gd" id="1_d8py6"]
+
+[resource]
+script = ExtResource("1_d8py6")
+name = "Defensor"
+abbr = "D"
+metadata/_custom_type_script = "uid://djruy7ivkc0y7"

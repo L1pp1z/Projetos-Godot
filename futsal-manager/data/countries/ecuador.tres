@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CountryResource" load_steps=3 format=3 uid="uid://b411nqo6lxub7"]
+
+[ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="1_ak3cu"]
+[ext_resource type="Texture2D" uid="uid://eq8ektbekhm1" path="res://assets/data/flags/ec.png" id="1_wbcfh"]
+
+[resource]
+script = ExtResource("1_ak3cu")
+key = "ec"
+name = "Ecuador"
+flag = ExtResource("1_wbcfh")
+metadata/_custom_type_script = "uid://c7n87xflb38uq"

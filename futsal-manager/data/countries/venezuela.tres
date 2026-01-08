@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CountryResource" load_steps=3 format=3 uid="uid://cvh7kjjva5i4l"]
+
+[ext_resource type="Texture2D" uid="uid://25s8cqmv577h" path="res://assets/data/flags/ve.png" id="1_0od8k"]
+[ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="1_rw22u"]
+
+[resource]
+script = ExtResource("1_rw22u")
+key = "ve"
+name = "Venezuela"
+flag = ExtResource("1_0od8k")
+metadata/_custom_type_script = "uid://c7n87xflb38uq"

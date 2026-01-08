@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CountryResource" load_steps=3 format=3 uid="uid://dykyo5pm0cg51"]
+
+[ext_resource type="Texture2D" uid="uid://dlqdrj0ayh7pc" path="res://assets/data/flags/cl.png" id="1_k6jh7"]
+[ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="1_veiaa"]
+
+[resource]
+script = ExtResource("1_veiaa")
+key = "cl"
+name = "Chile"
+flag = ExtResource("1_k6jh7")
+metadata/_custom_type_script = "uid://c7n87xflb38uq"

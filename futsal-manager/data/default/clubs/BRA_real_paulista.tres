@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ClubResource" load_steps=5 format=3 uid="uid://coybne6w7vi7u"]
+
+[ext_resource type="Script" uid="uid://bni3uhk1sxhp2" path="res://scripts/models/clubs.gd" id="1_2c4qn"]
+[ext_resource type="Script" uid="uid://coswica48lppw" path="res://scripts/models/player_base_data.gd" id="2_jfwc3"]
+[ext_resource type="Resource" uid="uid://bg8kqnivahyma" path="res://data/countries/brazil.tres" id="3_jfwc3"]
+
+[sub_resource type="Resource" id="Resource_egx1p"]
+script = ExtResource("2_jfwc3")
+name = "Pedro"
+country = ExtResource("3_jfwc3")
+metadata/_custom_type_script = "uid://coswica48lppw"
+
+[resource]
+script = ExtResource("1_2c4qn")
+name = "Real Paulista Futsal SP"
+short_name = "Real Paulista"
+force = 37
+squad_base = Array[ExtResource("2_jfwc3")]([SubResource("Resource_egx1p"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+metadata/_custom_type_script = "uid://bni3uhk1sxhp2"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ModInfoResource" load_steps=2 format=3 uid="uid://dvowmksjekt66"]
+
+[ext_resource type="Script" uid="uid://c3epybd3tla1u" path="res://scripts/models/modinfo.gd" id="1_d7gqd"]
+
+[resource]
+script = ExtResource("1_d7gqd")
+key = "default"
+name = "Default"
+metadata/_custom_type_script = "uid://c3epybd3tla1u"

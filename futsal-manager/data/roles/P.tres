@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RoleResource" load_steps=2 format=3 uid="uid://cne08i66mw0yh"]
+
+[ext_resource type="Script" uid="uid://djruy7ivkc0y7" path="res://scripts/models/role.gd" id="1_2mfsj"]
+
+[resource]
+script = ExtResource("1_2mfsj")
+name = "Pivot"
+abbr = "P"
+metadata/_custom_type_script = "uid://djruy7ivkc0y7"

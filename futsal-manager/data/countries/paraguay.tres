@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CountryResource" load_steps=3 format=3 uid="uid://c7virp27cand2"]
+
+[ext_resource type="Texture2D" uid="uid://c3skd80us5auu" path="res://assets/data/flags/py.png" id="1_l128r"]
+[ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="1_leljs"]
+
+[resource]
+script = ExtResource("1_leljs")
+key = "py"
+name = "Paraguay"
+flag = ExtResource("1_l128r")
+metadata/_custom_type_script = "uid://c7n87xflb38uq"

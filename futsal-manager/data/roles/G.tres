@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RoleResource" load_steps=2 format=3 uid="uid://cbft6slotwg45"]
+
+[ext_resource type="Script" uid="uid://djruy7ivkc0y7" path="res://scripts/models/role.gd" id="1_ca53d"]
+
+[resource]
+script = ExtResource("1_ca53d")
+name = "GoalKeeper"
+abbr = "G"
+metadata/_custom_type_script = "uid://djruy7ivkc0y7"

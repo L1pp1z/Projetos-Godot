@@ -14,8 +14,6 @@ func _ready():
 	first_name_input.text_changed.connect(_on_input_changed)
 	last_name_input.text_changed.connect(_on_input_changed)
 	age_input.value_changed.connect(_on_age_changed)
-	
-	GameState.coach_created.connect(_on_coach_created)
 
 func _on_input_changed(_new_text:String):
 	_validate_inputs()
@@ -24,9 +22,9 @@ func _on_age_changed(_new_value:float):
 	_validate_inputs()
 	
 func _validate_inputs():
-	var first_name = first_name_input.text.strip_edges().length() >= MIN_NAME_LENGTH
-	var last_name = last_name_input.text.strip_edges().length() >= MIN_NAME_LENGTH
-	var age_valid = age_input.value
+	var first_name := first_name_input.text.strip_edges().length() >= MIN_NAME_LENGTH
+	var last_name := last_name_input.text.strip_edges().length() >= MIN_NAME_LENGTH
+	var age_valid := age_input.value >= 18
 	
 	if first_name and last_name and age_valid:
 		continue_button.disabled = false
@@ -41,10 +39,8 @@ func _on_continue_pressed():
 		"last_name": last_name_input.text.strip_edges(),
 		"age": int(age_input.value)
 	}
-	GameState.create_coach(coach_data)
+	GameSetup.create_coach(coach_data)
+	SceneManager.go_to_select_club()
 
 func _on_back_pressed():
 	SceneManager.go_to_main_menu()
-
-func _on_coach_created(coach: CoachResource):
-	SceneManager.go_to_select_club()

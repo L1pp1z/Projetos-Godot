@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="RoleResource" load_steps=2 format=3 uid="uid://b1oygy2qgudsl"]
+
+[ext_resource type="Script" uid="uid://djruy7ivkc0y7" path="res://scripts/models/role.gd" id="1_l0b60"]
+
+[resource]
+script = ExtResource("1_l0b60")
+name = "Winger"
+abbr = "W"
+metadata/_custom_type_script = "uid://djruy7ivkc0y7"

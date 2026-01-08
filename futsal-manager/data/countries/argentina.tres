@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CountryResource" load_steps=3 format=3 uid="uid://sck83ikwpb6i"]
+
+[ext_resource type="Texture2D" uid="uid://dgo7afvwlowv4" path="res://assets/data/flags/ar.png" id="1_q50v2"]
+[ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="1_tpj80"]
+
+[resource]
+script = ExtResource("1_tpj80")
+key = "ar"
+name = "Argentina"
+flag = ExtResource("1_q50v2")
+metadata/_custom_type_script = "uid://c7n87xflb38uq"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CountryResource" load_steps=3 format=3 uid="uid://jid8wvf5hl2p"]
+
+[ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="1_rqbpo"]
+[ext_resource type="Texture2D" uid="uid://c4hybmuo3kyq" path="res://assets/data/flags/pe.png" id="1_wkqcq"]
+
+[resource]
+script = ExtResource("1_rqbpo")
+key = "pe"
+name = "Peru"
+flag = ExtResource("1_wkqcq")
+metadata/_custom_type_script = "uid://c7n87xflb38uq"

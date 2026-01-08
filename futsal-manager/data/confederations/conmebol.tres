@@ -1,11 +1,20 @@
-[gd_resource type="Resource" script_class="ConfederationResource" load_steps=4 format=3 uid="uid://dc5s7wi3qwuda"]
+[gd_resource type="Resource" script_class="ConfederationResource" load_steps=13 format=3 uid="uid://dc5s7wi3qwuda"]
 
 [ext_resource type="Script" uid="uid://c7n87xflb38uq" path="res://scripts/models/countries.gd" id="1_mnewv"]
+[ext_resource type="Resource" uid="uid://sck83ikwpb6i" path="res://data/countries/argentina.tres" id="2_3jwxs"]
 [ext_resource type="Script" uid="uid://ccnxdynsjkvad" path="res://scripts/models/confederation.gd" id="2_spxa1"]
 [ext_resource type="Resource" uid="uid://bg8kqnivahyma" path="res://data/countries/brazil.tres" id="2_tnr8t"]
+[ext_resource type="Resource" uid="uid://fxhd77nuj1p5" path="res://data/countries/bolivia.tres" id="3_6eoe7"]
+[ext_resource type="Resource" uid="uid://dykyo5pm0cg51" path="res://data/countries/chile.tres" id="5_vrw1j"]
+[ext_resource type="Resource" uid="uid://3dsdwhnghjav" path="res://data/countries/colombia.tres" id="6_s3mke"]
+[ext_resource type="Resource" uid="uid://b411nqo6lxub7" path="res://data/countries/ecuador.tres" id="7_52utv"]
+[ext_resource type="Resource" uid="uid://c7virp27cand2" path="res://data/countries/paraguay.tres" id="8_2kjsy"]
+[ext_resource type="Resource" uid="uid://jid8wvf5hl2p" path="res://data/countries/peru.tres" id="9_n3deu"]
+[ext_resource type="Resource" uid="uid://bdlopvrk4ejlt" path="res://data/countries/uruguay.tres" id="10_ab1g4"]
+[ext_resource type="Resource" uid="uid://cvh7kjjva5i4l" path="res://data/countries/venezuela.tres" id="11_olnt1"]
 
 [resource]
 script = ExtResource("2_spxa1")
 key = "conmebol"
-countries_list = Array[ExtResource("1_mnewv")]([ExtResource("2_tnr8t")])
+countries_list = Array[ExtResource("1_mnewv")]([ExtResource("2_3jwxs"), ExtResource("3_6eoe7"), ExtResource("2_tnr8t"), ExtResource("5_vrw1j"), ExtResource("6_s3mke"), ExtResource("7_52utv"), ExtResource("8_2kjsy"), ExtResource("9_n3deu"), ExtResource("10_ab1g4"), ExtResource("11_olnt1")])
 metadata/_custom_type_script = "uid://ccnxdynsjkvad"
